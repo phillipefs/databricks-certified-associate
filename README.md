@@ -1,0 +1,1 @@
+# databricks-certified-associate
