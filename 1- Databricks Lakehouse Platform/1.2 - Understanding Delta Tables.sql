@@ -1,4 +1,5 @@
 -- Databricks notebook source
+-- USING DELTA IS DEFAULT
 CREATE TABLE employees
   (id INT, name STRING, salary DOUBLE);
 
