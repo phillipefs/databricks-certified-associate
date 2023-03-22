@@ -24,6 +24,11 @@ DESCRIBE EXTENDED external_default
 
 -- COMMAND ----------
 
+-- MAGIC %python
+-- MAGIC dbutils.fs.ls("dbfs:/mnt/demo/external_default")
+
+-- COMMAND ----------
+
 DROP TABLE managed_default
 
 -- COMMAND ----------
