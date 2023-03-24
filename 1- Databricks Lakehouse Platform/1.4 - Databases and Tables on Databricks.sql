@@ -93,6 +93,7 @@ DROP TABLE external_new_default;
 
 -- COMMAND ----------
 
+-- DBTITLE 1,Create Database Custom Path
 CREATE SCHEMA custom
 LOCATION 'dbfs:/Shared/schemas/custom.db'
 
