@@ -22,7 +22,8 @@ SELECT * FROM json.`${dataset.bookstore}/customers-json/export_001.json`
 -- COMMAND ----------
 
 -- Query in Json 
-SELECT customer_id, email, profile:`first_name`, profile:`last_name`, profile:address:`street` as address_street FROM json.`${dataset.bookstore}/customers-json/export_001.json`
+SELECT customer_id, email, profile:`first_name`, profile:`last_name`, profile:address:`street` as address_street 
+FROM json.`${dataset.bookstore}/customers-json/export_001.json`
 
 -- COMMAND ----------
 
@@ -39,7 +40,7 @@ SELECT count(*) FROM json.`${dataset.bookstore}/customers-json`
 -- COMMAND ----------
 
  SELECT *,
-    input_file_name() source_file
+    input_file_name() as source_file
   FROM json.`${dataset.bookstore}/customers-json`;
 
 -- COMMAND ----------
