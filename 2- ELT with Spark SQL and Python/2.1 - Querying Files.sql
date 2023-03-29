@@ -21,7 +21,12 @@ SELECT * FROM json.`${dataset.bookstore}/customers-json/export_001.json`
 
 -- COMMAND ----------
 
-SELECT * FROM json.`${dataset.bookstore}/customers-json/export_*.json`
+-- Query in Json 
+SELECT customer_id, email, profile:`first_name`, profile:`last_name`, profile:address:`street` as address_street FROM json.`${dataset.bookstore}/customers-json/export_001.json`
+
+-- COMMAND ----------
+
+SELECT * FROM json.`${dataset.bookstore}/customers-json/export_*.json` 
 
 -- COMMAND ----------
 
