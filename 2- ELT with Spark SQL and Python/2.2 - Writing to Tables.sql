@@ -16,7 +16,21 @@ SELECT * FROM parquet.`${dataset.bookstore}/orders`
 
 -- COMMAND ----------
 
+DESCRIBE EXTENDED external_default
+
+-- COMMAND ----------
+
 SELECT * FROM orders
+
+-- COMMAND ----------
+
+-- DBTITLE 1,Query Json
+SELECT order_id, exploded_data.book_id
+FROM (
+  SELECT order_id, explode(books) as exploded_data
+  FROM orders
+) 
+
 
 -- COMMAND ----------
 
